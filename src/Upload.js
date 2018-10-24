@@ -86,6 +86,8 @@ class Upload {
    */
 
   directUploadWillCreateBlobWithXHR(xhr: XMLHttpRequest) {
+    xhr.withCredentials = true
+
     this.addHeaders(xhr)
 
     this.options.onBeforeBlobRequest &&
